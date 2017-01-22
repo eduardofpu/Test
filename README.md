@@ -3,7 +3,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
 
 
-[Test para tecnologia](https://github.com/eduardofpu/Test) is a rapid development framework for PHP which
+[Test para tecnologia](https://github.com/eduardofpu/Test) is a rapid development framework for JAVA 
 Projeto criado com finalidade de teste de conhecimento em linguagem java .
 
 ## Deploy
