@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test Register </title>
+<!-- Latest compiled and minified CSS -->
+
+
+
+<!-- Bootstrap -->
+<link href="vendors/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+
+</head>
+
+	
+
+<div class="jumbotron">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="login-panel panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Register Users</h3>
+				</div>
+			<div class="panel-body">
+
+
+
+<body >
+
+
+
+	<nav aria-label="...">
+        <ul class="pager">
+            <li class="previous disabled"><a href="cadastrarUsuario.html"><span aria-hidden="true">&larr;</span> Older</a></li>
+            <li class="next" data-placement="right" title="View lists"><a href="listar.html">Newer <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+     </nav>
+		
+			<br>
+				<br>
+		     		<div ng-app="cadastrarUsuario">	
+		     		   		
+		     		
+
+						<div ng-controller="ControUser as vm">
+						
+									
+				</br>
+				
+	
+<div>
+
+		<div class="container">
+			<div class="page-header">
+			
+				<div class="clearfix">
+					<div class="pull-left">
+						<p class="lead">Organize your user registration</p>
+					</div>
+
+							
+       <div class="pull-right">
+       
+       
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Register" 
+data-content="User"><span class="glyphicon glyphicon-hand-right"></span></button>	
+			
+		 <button type="button" class="btn btn-defaut btn-sm" 						
+						   data-toggle="modal" data-target="#novoModal"
+						   
+					 data-placement="right" title="Register" >
+						
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>	           			
+				
+				
+				
+				</div>
+			</div>
+		
+
+		<!-- Modal -->
+		<div class="modal fade" id="novoModal" tabindex="-1" role="dialog">
+			
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">New user</h4>					
+                    </div>
+					<form  name="theForm">
+					
+				
+					
+						<div class="modal-body">					
+						
+						<div class="for-group">
+						
+						<div ng-class="{'has-error': theForm.user$touched && (theForm.user.$error.required) , 'has-success':theForm.user.$valid}">
+						
+						
+						<label for="nome">Name</label>
+						<input class="form-control" type="text" name="user"
+									ng-model="vm.user" placeholder="Register a User " required>
+									
+								<span ng-show="theForm.user.$touched && theForm.user.$error.required" class="label label-danger">Register a User</span>								
+						         							
+						</div>
+						</div>
+						
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary" ng-click="usuario(vm.user)">Save
+								changes</button>
+						</div>	
+						
+		       </form>		
+			 </div>						
+	       </div>	
+	     </div>
+	    </div>			
+	  </body>
+				
+<form  name=theForm2>						
+	<table class="table table-bordered table-hover table-striped">
+     </br>
+		<div class="blocktext">
+			<div>
+				<div class="form-group input-group">
+				
+						<div ng-class="{'has-error': theForm2.pesquisar$touched && (theForm2.pesquisar.$error.required) , 'has-success':theForm2.pesquisar.$valid}">
+						
+                    	<input type="text" class="form-control" ng-model="busca"
+							placeholder="Search for a name: "  name="pesquisar" required>
+						
+					</div>	
+					<span class="input-group-addon"><i class="glyphicon glyphicon-search"
+					    data-toggle="popover" title="Search " data-content="for a name"></i></span>				
+				
+		   </div>
+		    <span ng-show="theForm2.pesquisar.$touched && theForm2.pesquisar.$error.required" class="label label-danger">Search for a name</span>					
+								
+	</div>
+</div>
+
+	<br/>
+		<thead>
+		
+			<div class="row">
+						<tr>				
+					         <th><font color="blue">Registered user </font>: <font color="red"> {{ valor }}</font></th>
+			                </tr>
+			            </div>				
+		     </thead>
+		<tbody>
+											
+
+			<tr	ng-repeat="nome in vm.nomes | filter:busca |orderBy:sortKey:reverse ">
+					<td>{{ nome.name }}</td>
+			</tr>
+
+ </tbody>
+        </table>
+               </form>	
+       	           </div>
+                   </div>
+                   </div> 
+                   </div>
+		    </div>
+	     </div>					
+      </div>		
+</div>
+	
+			<script src="js/angular.js"></script>
+				<script src="js/jquery.js"></script>
+				    <script src="js/angular-route.min.js"></script>
+						<script src="js/checklist-model.js"></script>
+						   <script src="js/skel.min.js"></script>
+						   <script src="js/respond.min.js"></script>							
+						<script src="js/cadastrarUsuario.js"></script>
+                     <script src="js/jquery.min.js"></script>
+                 <script  src="js/bootstrap.min.js"></script>
+             <script  src="js/popover.js"></script>  
+
+
+					 </div>
+				  </div>
+			   </div>
+		    </div>
+	      </div>
+       </div>
+</html>

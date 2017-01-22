@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Test list</title>
+
+
+
+<!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+
+</head>
+
+
+<div class="jumbotron">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="login-panel panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">View List User</h3>
+					</div>
+					<div class="panel-body">
+
+	<body>
+	
+	
+	<nav aria-label="...">
+        <ul class="pager">
+            <li class="previous " data-placement="right" title="Back to register users"><a href="cadastrarUsuario.html"><span aria-hidden="true" >&larr;</span> Older</a></li>
+            <li class="next disabled"><a href="listar.html">Newer <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+     </nav>      
+		       <br>
+		    <br>
+		<div ng-app="listarUsuario">
+
+	<div ng-controller="ControListar as vm">
+		 <div class="form-group">	
+		    												
+	       <button class="btn btn-info btn-s"  ng-click="usuario(vm.user)" 
+	             data-placement="right" title="View the last name"  data-toggle="modal" data-target="#novoModal">Last name list</button>			        
+		       												
+		       <button class="btn btn-info btn-s"  ng-click="usuarios(vm.users)"    
+		         data-placement="right" title="View the complete list" >Full list</button>					    		    								
+		  </div>		    		
+	</br>
+ </br>
+ 
+ <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="novoModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Last user</h4>
+      </div>
+      
+      <div class="modal-body">        
+        <div class="row">          
+              <div class="col-md-20 col-md-offset-1">               
+
+<table class="table table-bordered table-hover table-striped" >
+	<br/>
+		<thead>		
+			<tr>
+			<th>Name:</th>
+			</tr>
+		</thead>
+                <tbody>											
+				<tr ng-repeat="nome in vm.nomes ">
+				<td><font color="orange">{{ nome.name }}</font></td>
+				</tr>											
+				</tbody>
+	     </table>             
+           
+             
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+               
+
+<table class="table table-bordered table-hover table-striped" >
+
+		
+	<br/>	
+     	<thead>
+     		<tr>
+				<th>Users</th>
+			</tr>
+		</thead>
+        <tbody>											
+				<tr ng-repeat="n in vm.ns  ">
+				<td><font color="orange">{{ n.names }}</font></td>
+				</tr>											
+		</tbody>
+	     </table>                   
+	</div>
+</div>
+   
+   <script src="js/angular.js"></script>     
+       <script src="js/angular-route.min.js"></script>     
+           <script src="js/checklist-model.js"></script>
+             <script src="js/skel.min.js"></script>    
+              <script src="js/respond.min.js"></script>  
+           <script src="js/listar.js"></script>
+         <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>   
+  
+  
+</body>
+	</div>
+		</div>
+		</div>
+		</div>
+	</div>
+
+</div>
+
+</html>
