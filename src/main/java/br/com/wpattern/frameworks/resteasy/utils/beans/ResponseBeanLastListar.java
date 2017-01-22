@@ -17,19 +17,15 @@ public class ResponseBeanLastListar  extends BaseBean{
 		// TODO Auto-generated constructor stub
 	}
 
-
-
 	public ResponseBeanLastListar(List<String> nomes) {
 		super();
-
 		for( String l : nomes){
 
 			this.nomes = l.concat(" :  Last name registered successfully!");
 
+			System.out.println(l);
 
 		}
-
-
 
 
 	}
@@ -41,6 +37,8 @@ public class ResponseBeanLastListar  extends BaseBean{
 	public void setNomes(String nomes) {
 		this.nomes = nomes;
 	}
+
+
 
 
 

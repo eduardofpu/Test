@@ -70,9 +70,17 @@ git remote -v
 enviar o codigo para o heroku
 git push heroku master
 
+``` bash
+heroku logs --tail: Verificar o log da aplicação
+```
+``` bash
+heroku open: abrir o browser
+```
+
 ## Para adicionar o banco de dados: free
 
 heroku addons:add heroku-postgresql:hobby-dev
+
 
 Host #######	
 Database  #######
