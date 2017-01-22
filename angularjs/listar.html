@@ -43,10 +43,10 @@
 	<div ng-controller="ControListar as vm">
 		 <div class="form-group">	
 		    												
-	       <button class="btn btn-info btn-s"  ng-click="usuario(vm.user)" 
+	       <button class="btn btn-info btn-s"  ng-click="usuario()"  
 	             data-placement="right" title="View the last name"  data-toggle="modal" data-target="#novoModal">Last name list</button>			        
 		       												
-		       <button class="btn btn-info btn-s"  ng-click="usuarios(vm.users)"    
+		       <button class="btn btn-info btn-s"  ng-click="usuarios()"    
 		         data-placement="right" title="View the complete list" >Full list</button>					    		    								
 		  </div>		    		
 	</br>
@@ -62,7 +62,7 @@
       
       <div class="modal-body">        
         <div class="row">          
-              <div class="col-md-20 col-md-offset-1">               
+              <div class="col-md-8 col-md-offset-2">               
 
 <table class="table table-bordered table-hover table-striped" >
 	<br/>
@@ -72,8 +72,8 @@
 			</tr>
 		</thead>
                 <tbody>											
-				<tr ng-repeat="nome in vm.nomes ">
-				<td><font color="orange">{{ nome.name }}</font></td>
+				<tr ng-repeat="nome in vm.lastnome ">
+				<td><font color="orange">{{nome}}</font></td>
 				</tr>											
 				</tbody>
 	     </table>             
@@ -102,8 +102,8 @@
 			</tr>
 		</thead>
         <tbody>											
-				<tr ng-repeat="n in vm.ns  ">
-				<td><font color="orange">{{ n.names }}</font></td>
+				<tr ng-repeat="nome in vm.nomes  ">
+				<td><font color="orange">{{nome}}</font></td>
 				</tr>											
 		</tbody>
 	     </table>                   

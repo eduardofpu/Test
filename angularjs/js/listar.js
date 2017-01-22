@@ -3,68 +3,40 @@ angular.module('listarUsuario',  [])
 							
 			
  var vm = this;
- vm.user = null;
- vm.users = null;
 
-		vm.addUsers = function() {
-			
-			 vm.nomes.push({
-					name : vm.user
-					});
-		}
-		
-		
-		vm.addUsers2 = function() {
-			
-			 vm.ns.push({
-					names : vm.users
-					});
-		}
-
-		$scope.usuario = function(user) {
-			
+		$scope.usuario = function() {	
 			
 			var Url = {
 				method : 'POST',
 				url : 'http://localhost:8080/service/math/listar',
 				headers : {	'Content-Type' : 'application/json'	},
-				data : {							
-				}
+				
 		};		
+		
 					
 
-	     $http(Url).then( function(evt) {
+	     $http(Url).then( function(evt) {   
 	    	
-		   vm.nomes = [   
+	    	 vm.lastnome = [evt.data.responseBeanLastListar.nomes];    	
+		  
+	       });
+	   };
+	   
+	   
+	   $scope.usuarios = function() {			
+			
+			var Url2 = {
+				method : 'POST',
+				url : 'http://localhost:8080/service/math/listacompleta',
+				headers : {	'Content-Type' : 'application/json'	},
 						
-						{name: evt.data.responseBeanLastListar.nomes}
+				};				
 
-						]; 
-	            });
-	        };
-	        
-	        
-	        
-	        $scope.usuarios = function(users) {
-				
-				
-				var Url2 = {
-					method : 'POST',
-					url : 'http://localhost:8080/service/math/listacompleta',
-					headers : {	'Content-Type' : 'application/json'	},
-					data : {							
-					}
-			};
-						
-
-		     $http(Url2).then( function(evt) {
+		  $http(Url2).then( function(evt) {
 		    	
-			   vm.ns = [   
-							
-							{names: evt.data.responseBeanListaCompleta.listfull}
-
-							]; 
-		            });
-		        };     
+			 vm.nomes = [evt.data.responseBeanListaCompleta.listfull]; 
+			 
+		   });
+	   };     
 
 });

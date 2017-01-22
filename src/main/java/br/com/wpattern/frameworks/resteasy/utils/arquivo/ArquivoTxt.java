@@ -15,7 +15,8 @@ import java.util.List;
 
 public class ArquivoTxt {
 
-	Path Txt= Paths.get("D:/nomes.txt");
+	Path Txt = Paths.get("D:/nomes.txt");
+
 
 	public void modoDeAbertura(String nome) throws IOException{
 
@@ -31,11 +32,7 @@ public class ArquivoTxt {
 	public List<String> leituraArquivoTxt(List<String> Lines) throws IOException{
 
 		Lines = Files.readAllLines(Txt, Charset.defaultCharset());
-		List<String> listas = new ArrayList<>();
-		for (String l: Lines) {
-			System.out.println(l);
-			listas.add(l);
-		}
+
 		return Lines;
 	}
 
